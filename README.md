@@ -1,5 +1,4 @@
 
-
 # ORMs in General
 
 By now you should already be familiar with the concept of an [ORM](http://en.wikipedia.org/wiki/Object-relational_mapping), and have written something of your own via the Ruby Student Class.
@@ -103,7 +102,7 @@ end
 
 So where do the methods for getting and setting 'name' get added? Where is the only place thus far you can think of that we've added something called name?
 
-If you answered 'in the database' then you're on the right track. An ORM's job is to be the glue between our database and our objects. In this case, ActiveRecord is really smart and has made some assumptions for us. ActiveRecord assumes its job is to make it so that you can interact with your rows in your database as Ruby objects. So if you want to read attributes of an object, or make changes to them, it assumes you're goal is to reflect those changes in the database.
+If you answered 'in the database' then you're on the right track. An ORM's job is to be the glue between our database and our objects. In this case, ActiveRecord is really smart and has made some assumptions for us. ActiveRecord assumes its job is to make it so that you can interact with the rows in your database as Ruby objects. So if you want to read attributes of an object, or make changes to them, it assumes your goal is to reflect those changes in the database.
 
 Basically, ActiveRecord is saying "Ok, I've got this class Student, it must map to a table called 'students.'" Then it's looking in the students table and for each column in that table, and adding methods for both getting and setting that attribute.
 
